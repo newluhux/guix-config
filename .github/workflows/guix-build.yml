@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: setup src
-      run: |
-        echo "setup ok"
+        run: |
+          echo "setup ok"
       - name: Install GNU Guix
         uses: PromyLOPh/guix-install-action@v1.3
       - name: organize files
