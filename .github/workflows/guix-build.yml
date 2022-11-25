@@ -1,0 +1,40 @@
+name: guix-build
+run-name: guix-build
+on:
+  schedule:
+    - cron: '40 7 * * 4'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: setup src
+      run: |
+        echo "setup ok"
+      - name: Install GNU Guix
+        uses: PromyLOPh/guix-install-action@v1.3
+      - name: organize files
+        id: organize
+        run: |
+          mkdir /tmp/out/
+          cp $(guix system image -t iso9660 generic.scm) /tmp/out/system.iso
+          cd /tmp/out/
+          echo "OUTPUT=$PWD" >> $GITHUB_ENV
+      - name: generate release tag
+        id: tag
+        run: |
+          echo "::set-output name=release_tag::$(date +"%Y%m%d")"
+      - name: make release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          files: ${{ env.OUTPUT }}/*
+      - name: delete workflow runs
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 5
