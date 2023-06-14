@@ -13,7 +13,10 @@ RUN apt update -y && \
     nvi cscope openssh-client dropbear-bin sparse indent git-core gnupg flex \
     bison build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses5 \
     lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev \
-    libxml2-utils xsltproc unzip fontconfig lzma repo && \
+    libxml2-utils xsltproc unzip fontconfig lzma repo chrpath diffstat lz4 \
+    zstd && \
     apt autoremove -y && \
     apt clean -y
 
+RUN echo en_US.UTF-8 > /etc/locale.gen
+RUN locale-gen
