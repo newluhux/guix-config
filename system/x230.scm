@@ -4,6 +4,7 @@
  (guix utils)
  (hui packages embedded)
  (hui services proxy)
+ (hui services games)
  (hui packages linux)
  (hui packages proxy))
 (use-service-modules desktop xorg virtualization docker sddm networking linux)
@@ -57,6 +58,7 @@
 
   (services
    (cons*
+    (service minetest-service-type)
     (service clash-service-type
              (clash-configuration
               (config-file "/etc/clash/config.yaml")))
