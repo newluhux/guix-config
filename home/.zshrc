@@ -27,3 +27,6 @@ promptinit
 
 prompt redhat
 zstyle ':completion:*' menu select
+
+# path
+export PATH=$HOME/bin:$PATH
