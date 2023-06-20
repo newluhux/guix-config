@@ -3,6 +3,7 @@
 
 (define-public %connect-packages
   (list
-   openssh picocom lrzsz ek eksw screen tmux gkermit ukermit ckermit iperf))
+   openssh picocom lrzsz ek eksw screen tmux gkermit ukermit ckermit iperf
+   putty))
 
 (packages->manifest %connect-packages)
