@@ -19,6 +19,6 @@
    binwalk strace ltrace perf ccache file
    bvi bison flex dtc u-boot-tools pluseview hexedit
    ufbterm wine64 licensecheck mtd-utils bmaptools
-   zsh zsh-completions sicp))
+   zsh zsh-completions sicp i2c-tools))
 
 (packages->manifest %develop-packages)
