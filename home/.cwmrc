@@ -1,7 +1,10 @@
 fontname unifont-10
 
 command terminal xterm
+command putty putty
+command pulseview pulseview
 command scrot "scrot -s"
 command icecat icecat
 command chromium chromium
 command emacsclient "emacsclient -c"
+command xkill xkill

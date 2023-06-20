@@ -30,5 +30,8 @@
                      (".clang-format" ,(local-file ".clang-format"
 						   "clang-format"))
                      (".xinitrc" ,(local-file ".xinitrc" "xinitrc"
-                                              #:recursive? #t)))))))
+                                              #:recursive? #t))
+                     (".putty/sessions/Default%20Settings"
+                      ,(local-file
+                        ".putty/sessions/Default%20Settings" "puttyrc")))))))
 
