@@ -4,7 +4,7 @@
 
 (define-public %xorg-packages
   (list
-   cwm xterm xset xsetroot xkbset xrdb
+   cwm xterm xset xsetroot xkbset xrdb xkill
    qt5ct breeze-icons
    fcitx5 fcitx5-rime fcitx5-gtk fcitx5-qt fcitx5-gtk4 fcitx5-configtool))
 
