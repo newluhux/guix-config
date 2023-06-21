@@ -31,7 +31,11 @@
                  (list (file-system
                          (device (uuid "d3b00ed3-660d-48c5-92ea-aa1e883bb02f"))
                          (mount-point "/")
-                         (type "btrfs")))
+                         (type "btrfs"))
+                       (file-system
+                         (device (uuid "0E88-577E" 'fat))
+                         (mount-point "/sdcard")
+                         (type "vfat")))
                  %base-file-systems))
 
   (swap-devices (list (swap-space
