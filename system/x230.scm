@@ -81,11 +81,6 @@
              (tor-configuration
               (config-file (plain-file "tor-config"
                                        "Socks5Proxy 127.0.0.1:7891\n"))))
-    (service sddm-service-type)
-    (set-xorg-configuration
-     (xorg-configuration
-      (keyboard-layout keyboard-layout))
-     sddm-service-type)
     (service zram-device-service-type
              (zram-device-configuration
               (size "2G")

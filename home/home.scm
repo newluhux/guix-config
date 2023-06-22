@@ -15,23 +15,23 @@
             (home-zsh-configuration
              (environment-variables
               '(("PAGER" . "less")
-                ("EDITOR" . "emacsclient -c")
-                ("XMODIFIERS" . "@im=fcitx")
-                ("GTK_IM_MODULE" . "xim")
-                ("QT_IM_MODULE" . "xim")))
+                ("EDITOR" . "ec")
+                ("XKB_DEFAULT_LAYOUT" . "us")
+                ("XKB_DEFAULT_OPTIONS" . "ctrl:nocaps")))
              (zshrc
               (list (local-file ".zshrc" "zshrc")))))
 
    (simple-service 'my-config-file
                    home-files-service-type
                    `((".emacs" ,(local-file ".emacs" "emacs"))
-                     (".Xdefaults" ,(local-file ".Xdefaults" "Xdefaults"))
-                     (".cwmrc" ,(local-file ".cwmrc" "cwmrc"))
                      (".clang-format" ,(local-file ".clang-format"
 						   "clang-format"))
-                     (".xinitrc" ,(local-file ".xinitrc" "xinitrc"
-                                              #:recursive? #t))
+                     (".config/foot/foot.ini"
+                      ,(local-file ".config/foot/foot.ini"
+				   "foot.ini"))
                      (".putty/sessions/Default%20Settings"
                       ,(local-file
-                        ".putty/sessions/Default%20Settings" "puttyrc")))))))
+                        ".putty/sessions/Default%20Settings" "puttyrc"))
+                     ("bin/startup" ,(local-file "bin/startup" #:recursive? #t))
+                     ("bin/ec" ,(local-file "bin/ec" #:recursive? #t)))))))
 

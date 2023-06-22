@@ -1,6 +1,0 @@
-XTerm*utf8: always
-XTerm*metaSendsEscape: true
-XTerm*faceName: Spleen-12
-XTerm*scrollBar: true
-XTerm*saveLines: 32768
-XTerm*inputMethod: fcitx

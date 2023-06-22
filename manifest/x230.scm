@@ -15,7 +15,7 @@
    "radio.scm"
    "security.scm"
    "proxy.scm"
-   "xorg.scm"
+   "graphic.scm"
    "script.scm"
    "terminal.scm"
    "web.scm"))
@@ -35,7 +35,7 @@
    %game-packages
    %radio-packages
    %security-packages
-   %xorg-packages
+   %graphic-packages
    %proxy-packages
    %script-packages
    %terminal-packages
