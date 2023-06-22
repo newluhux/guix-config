@@ -3,6 +3,6 @@
 
 (define-public %font-packages
   (list
-   fontconfig font-spleen font-gnu-unifont font-google-noto-emoji))
+   fontconfig font-terminus font-gnu-unifont font-google-noto-emoji))
 
 (packages->manifest %font-packages)
