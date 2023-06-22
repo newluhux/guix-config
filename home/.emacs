@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("4c56af497ddf0e30f65a7232a8ee21b3d62a8c332c6b268c81e9ea99b11da0d3" default))
  '(warning-suppress-types '((comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -17,10 +19,10 @@
       treemacs-space-between-root-nodes nil)
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "spleen-12"))
+(add-to-list 'default-frame-alist '(font . "spleen-10"))
 
 ;; theme
-(load-theme 'modus-operandi)
+(load-theme 'solarized-light)
 
 ;; disable startup interface
 (setq inhibit-startup-screen t)

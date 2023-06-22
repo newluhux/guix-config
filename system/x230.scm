@@ -56,8 +56,7 @@
      nss-certs le-certs
      singularity
      rsync
-     btrfs-progs
-     xinitrc-xsession)
+     btrfs-progs)
     %base-packages))
 
   (services

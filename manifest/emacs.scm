@@ -4,7 +4,7 @@
 (define-public %emacs-packages
   (list
    emacs-next-pgtk-xwidgets emacs-company emacs-lsp-mode emacs-yasnippet
-   emacs-yasnippet-snippets emacs-lsp-ui
+   emacs-yasnippet-snippets emacs-lsp-ui emacs-solarized-theme
    emacs-rime emacs-telega emacs-magit emacs-ivy
    emacs-dts-mode))
 
