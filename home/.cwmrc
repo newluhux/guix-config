@@ -1,10 +1,11 @@
-fontname unifont-10
+fontname Spleen-12
 
 command terminal xterm
 command putty putty
 command pulseview pulseview
-command scrot "scrot -s"
 command icecat icecat
 command chromium chromium
 command emacsclient "emacsclient -c"
+command guile-studio guile-studio
+command scrot "scrot -s"
 command xkill xkill

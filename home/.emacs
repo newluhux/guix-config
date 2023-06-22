@@ -17,7 +17,7 @@
       treemacs-space-between-root-nodes nil)
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "unifont-10"))
+(add-to-list 'default-frame-alist '(font . "spleen-12"))
 
 ;; theme
 (load-theme 'modus-operandi)
@@ -88,19 +88,8 @@
 ;; company mode
 (setq company-idle-delay 0.0
       company-minimum-prefix-length 2)
-(add-hook 'prog-mode-hook #'company-mode)
 (add-hook 'c-mode-hook #'company-mode)
-(add-hook 'lisp-mode-hook #'company-mode)
-(add-hook 'scheme-mode-hook #'company-mode)
 
 ;; yasnippet
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 (add-hook 'c-mode-hook #'yas-minor-mode)
-(add-hook 'lisp-mode-hook #'yas-minor-mode)
-(add-hook 'scheme-mode-hook #'yas-minor-mode)
-
-;; GNU Guix
-(with-eval-after-load 'geiser-guile
- (add-to-list 'geiser-guile-load-path "~/src/guix"))
-(with-eval-after-load 'yasnippet
- (add-to-list 'yas-snippet-dirs "~/src/guix/etc/snippets/yas"))

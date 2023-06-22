@@ -4,7 +4,7 @@
 (define-public %emacs-packages
   (list
    emacs-next emacs-company emacs-lsp-mode emacs-yasnippet
-   emacs-yasnippet-snippets emacs-lsp-ui emacs-geiser emacs-geiser-guile
+   emacs-yasnippet-snippets emacs-lsp-ui
    emacs-rime emacs-telega emacs-magit emacs-ivy
    emacs-dts-mode))
 
