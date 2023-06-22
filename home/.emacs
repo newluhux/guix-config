@@ -19,7 +19,7 @@
       treemacs-space-between-root-nodes nil)
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "spleen-10"))
+(add-to-list 'default-frame-alist '(font . "spleen-12"))
 
 ;; theme
 (load-theme 'solarized-light)
