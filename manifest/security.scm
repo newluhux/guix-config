@@ -4,6 +4,6 @@
 (define-public %security-packages
   (list
    nss-certs le-certs
-   password-store gnupg pinentry-tty openssl))
+   password-store gnupg pinentry-tty))
 
 (packages->manifest %security-packages)
