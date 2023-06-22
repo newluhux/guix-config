@@ -6,6 +6,5 @@ command pulseview pulseview
 command icecat icecat
 command chromium chromium
 command emacsclient "emacsclient -c"
-command guile-studio guile-studio
 command scrot "scrot -s"
 command xkill xkill
