@@ -14,7 +14,7 @@ RUN apt update -y && \
     bison build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses5 \
     lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev \
     libxml2-utils xsltproc unzip fontconfig lzma repo chrpath diffstat lz4 \
-    zstd && \
+    zstd less binwalk ckermit && \
     apt autoremove -y && \
     apt clean -y
 
