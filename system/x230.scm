@@ -7,8 +7,10 @@
  (hui services games)
  (hui packages linux)
  (hui packages proxy))
-(use-service-modules desktop xorg virtualization docker sddm networking linux)
+(use-service-modules desktop xorg virtualization docker sddm networking linux
+                     dns)
 (use-package-modules certs linux gnome wm radio admin embedded rsync shells)
+
 
 (operating-system
   (kernel-loadable-modules
@@ -80,6 +82,10 @@
              (tor-configuration
               (config-file (plain-file "tor-config"
                                        "Socks5Proxy 127.0.0.1:7891\n"))))
+    (service dnsmasq-service-type
+             (dnsmasq-configuration
+              (tftp-enable? #t)
+              (tftp-root "/share")))
     (service zram-device-service-type
              (zram-device-configuration
               (size "2G")
