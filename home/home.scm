@@ -26,9 +26,9 @@
                    `((".emacs" ,(local-file ".emacs" "emacs"))
                      (".clang-format" ,(local-file ".clang-format"
 						   "clang-format"))
-                     (".config/foot/foot.ini"
-                      ,(local-file ".config/foot/foot.ini"
-				   "foot.ini"))
+                     (".config/sakura/sakura.conf"
+                      ,(local-file ".config/sakura/sakura.conf"
+				   "sakura.conf"))
                      (".putty/sessions/Default%20Settings"
                       ,(local-file
                         ".putty/sessions/Default%20Settings" "puttyrc"))
