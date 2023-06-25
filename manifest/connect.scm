@@ -1,9 +1,9 @@
 (use-modules (gnu) (guix profiles) (hui packages embedded))
-(use-package-modules ssh terminals admin screen tmux networking)
+(use-package-modules ssh terminals admin screen tmux networking virtualization)
 
 (define-public %connect-packages
   (list
    openssh picocom lrzsz ek eksw screen tmux gkermit ukermit ckermit iperf
-   putty))
+   putty virt-manager))
 
 (packages->manifest %connect-packages)
