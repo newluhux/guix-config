@@ -13,11 +13,6 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; performance
-(setq gc-cons-threshold (* 100 1024 1024)
-      read-process-output-max (* 1024 1024)
-      treemacs-space-between-root-nodes nil)
-
 ;; font
 (add-to-list 'default-frame-alist '(font . "unifont-12"))
 
@@ -37,7 +32,7 @@
 
 ;; my blog
 (require 'ox-publish)
-(defvar blog-path (concat (getenv "HOME") "/work/blog"))
+(defvar blog-path (concat (getenv "HOME") "/work/newluhux.github.io/"))
 (defvar blog-base-directory (concat blog-path "/org/"))
 (defvar blog-publishing-directory (concat blog-path "/"))
 
@@ -77,21 +72,3 @@
       (list
        '(:server "127.0.0.1" :port 7891 :enable t
                  :type (:@type "proxyTypeSocks5"))))
-
-;; code style
-(setq c-default-style "linux")
-
-;; lsp mode
-(setq lsp-keymap-prefix "s-l")
-(require 'lsp-mode)
-(add-hook 'c-mode-hook #'lsp)
-(setq lsp-idle-delay 0.1)
-
-;; company mode
-(setq company-idle-delay 0.0
-      company-minimum-prefix-length 2)
-(add-hook 'c-mode-hook #'company-mode)
-
-;; yasnippet
-(add-hook 'prog-mode-hook #'yas-minor-mode)
-(add-hook 'c-mode-hook #'yas-minor-mode)
