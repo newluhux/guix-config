@@ -8,7 +8,7 @@
  bootloaders llvm wine license disk shells shellutils glib
  gtk spice attr xdisorg gl image containers libusb ncurses firmware
  pulseaudio sdl networking compression gettext ninja perl pkg-config
- python sphinx texinfo pcre virtualization)
+ python sphinx texinfo pcre virtualization algebra)
 
 (define-public %qemu-dev-packages
   (list
@@ -76,7 +76,7 @@
     binwalk strace ltrace perf ccache file
     bvi bison flex dtc u-boot-tools pluseview hexedit
     ufbterm wine64 licensecheck mtd-utils bmaptools
-    zsh zsh-completions sicp i2c-tools qemu)
+    zsh zsh-completions sicp i2c-tools qemu bc)
    %qemu-dev-packages))
 
 
