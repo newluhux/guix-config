@@ -83,6 +83,8 @@
              (tor-configuration
               (config-file (plain-file "tor-config"
                                        "Socks5Proxy 127.0.0.1:7891\n"))))
+    (service libvirt-service-type)
+    (service virtlog-service-type)
     (service dnsmasq-service-type
              (dnsmasq-configuration
               (tftp-enable? #t)
