@@ -3,7 +3,7 @@ command terminal sakura
 command icecat icecat
 command chromium chromium
 command chrome google-chrome
-command editor editor
+command emacsclient "emacsclient -c"
 command qtcreator qtcreator
 command pulseview pulseview
 command gqrx gqrx
