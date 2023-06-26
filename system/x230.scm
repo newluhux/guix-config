@@ -58,7 +58,8 @@
      nss-certs le-certs
      singularity
      rsync
-     btrfs-progs)
+     btrfs-progs
+     xinitrc-xsession)
     %base-packages))
 
   (services
@@ -91,6 +92,11 @@
               (size "2G")
               (compression-algorithm 'zstd)
               (priority 100)))
+    (service sddm-service-type)
+    (set-xorg-configuration
+     (xorg-configuration
+      (keyboard-layout keyboard-layout))
+     sddm-service-type)
     (modify-services %desktop-services
       (delete gdm-service-type)
       (guix-service-type

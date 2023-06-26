@@ -30,9 +30,3 @@ zstyle ':completion:*' menu select
 
 # path
 export PATH=$HOME/bin:$PATH
-
-# graphic
-if [ "$(tty)" = "/dev/tty1" ]
-then
-    exec dwl -s startup
-fi

@@ -4,8 +4,7 @@
 
 (define-public %graphic-packages
   (list
-   dwl-hui foot sakura bemenu wl-clipboard
-   xset xsetroot xkbset xrdb xkill xclip
+   cwm sakura xset xsetroot xkbset xrdb xkill xclip xhost
    qt5ct breeze-icons))
 
 (packages->manifest %graphic-packages)
