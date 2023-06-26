@@ -5,8 +5,6 @@ command chromium chromium
 command chrome google-chrome
 command editor editor
 command qtcreator qtcreator
-command xmove xmove
-command xresize xresize
 command xlock xlock
 command xkill xkill
 
