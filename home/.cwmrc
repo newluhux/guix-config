@@ -5,6 +5,8 @@ command chromium chromium
 command chrome google-chrome
 command editor editor
 command qtcreator qtcreator
+command pulseview pulseview
+command gqrx gqrx
 command xlock xlock
 command xkill xkill
 
