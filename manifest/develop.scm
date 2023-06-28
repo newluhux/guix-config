@@ -2,66 +2,23 @@
  (hui packages embedded)
  (hui packages engineering))
 (use-package-modules
- man linux elf code version-control gdb embedded qt bash
- engineering android admin build-tools cmake haskell-apps
- java ccache file hexedit bison flex hexedit scheme python-xyz
- bootloaders llvm wine license disk shells shellutils glib
- gtk spice attr xdisorg gl image containers libusb ncurses firmware
- pulseaudio sdl networking compression gettext ninja perl pkg-config
- python sphinx texinfo pcre virtualization algebra)
+ man linux elf code version-control gdb embedded qt bash engineering android
+ admin build-tools cmake haskell-apps java ccache file hexedit bison flex
+ hexedit scheme python-xyz bootloaders llvm wine license disk shells shellutils
+ glib gtk spice attr xdisorg gl image containers libusb ncurses firmware
+ pulseaudio sdl networking compression gettext ninja perl pkg-config python
+ sphinx texinfo pcre virtualization algebra pciutils)
 
 (define-public %qemu-dev-packages
   (list
-   bash-minimal dtc glib gtk+
-   ipxe-qemu
-   libaio
-   libcacard                    ;smartcard support
-   attr libcap-ng               ;VirtFS support
-   libdrm
-   libepoxy
-   libjpeg-turbo
-   libpng
-   libseccomp
-   libslirp
-   liburing
-   libusb                       ;USB pass-through support
-   mesa
-   ncurses
-   openbios-qemu-ppc
-   opensbi-qemu
-   ;; ("pciutils" ,pciutils)
-   pixman
-   pulseaudio
-   sdl2
-   seabios-qemu
-   sgabios
-   spice
-   usbredir
-   util-linux
-   vde2
-   virglrenderer
-
-   ;; Formats to support for .qcow2 (and possibly other) compression.
-   zlib
-   (list zstd "lib")
-   acpica
-   bison
-   flex
-   gettext-minimal
-   (list glib "bin")               ;gtester, etc.
-   meson
-   ninja
-   perl
-   pkg-config
-   python-wrapper
-   python-sphinx
-   python-sphinx-rtd-theme
-   texinfo
-   ;; The following static libraries are required to build
-   ;; the static output of QEMU.
-   (list glib "static")
-   (list pcre "static")
-   (list zlib "static")))
+   bash-minimal dtc glib gtk+ ipxe-qemu libaio libcacard
+   attr libcap-ng libdrm libepoxy libjpeg-turbo libpng libseccomp
+   libslirp liburing libusb mesa ncurses openbios-qemu-ppc opensbi-qemu
+   pciutils pixman pulseaudio sdl2 seabios-qemu sgabios spice usbredir
+   util-linux vde2 virglrenderer zlib (list zstd "lib") acpica bison flex
+   gettext-minimal (list glib "bin") meson ninja perl pkg-config python-wrapper
+   python-sphinx python-sphinx-rtd-theme texinfo
+   (list glib "static") (list pcre "static") (list zlib "static")))
 
 (define-public %develop-packages
   (append 
