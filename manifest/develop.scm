@@ -20,6 +20,11 @@
    python-sphinx python-sphinx-rtd-theme texinfo
    (list glib "static") (list pcre "static") (list zlib "static")))
 
+(define-public %qt-dev-packages
+  (list
+   qttools qttranslations qt5compat qtbase qtsvg qtdeclarative qtshadertools
+   qtsvg))
+
 (define-public %develop-packages
   (append 
    (list
@@ -34,7 +39,7 @@
     bvi bison flex dtc u-boot-tools pluseview hexedit
     ufbterm wine64 licensecheck mtd-utils bmaptools
     zsh zsh-completions sicp i2c-tools qemu bc)
-   %qemu-dev-packages))
+   %qemu-dev-packages %qt-dev-packages))
 
 
 (packages->manifest %develop-packages)
