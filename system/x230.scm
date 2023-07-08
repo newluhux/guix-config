@@ -33,6 +33,10 @@
                            (device (uuid "d487d913-7c27-40e4-9acf-06723aad65bd"))
                            (mount-point "/boot")
                            (type "ext2"))
+                         (file-system
+                           (device (uuid "0E88-577E" 'fat))
+                           (mount-point "/sdcard")
+                           (type "vfat"))
                          %base-file-systems))
 
     (swap-devices
