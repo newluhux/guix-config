@@ -22,7 +22,7 @@
 
 (map load load-list)
 
-(define-public %x230-packages
+(define-public %luhui-packages
   (append
    %archive-packages
    %connect-packages
@@ -41,4 +41,4 @@
    %terminal-packages
    %web-packages))
 
-(packages->manifest %x230-packages)
+(packages->manifest %luhui-packages)

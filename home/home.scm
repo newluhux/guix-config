@@ -5,10 +5,10 @@
  (gnu services)
  (guix gexp))
 
-(load "../manifest/x230.scm")
+(load "../manifest/luhui.scm")
 
 (home-environment
- (packages %x230-packages)
+ (packages %luhui-packages)
  (services
   (list
    (service home-zsh-service-type
@@ -16,7 +16,8 @@
              (environment-variables
               '(("PAGER" . "less")
                 ("EDITOR" . "editor")
-                ("font" . "$HOME/.guix-home/profile/font/fixed/unicode.7x14.font")
+                ("font" .
+                 "$HOME/.guix-home/profile/font/fixed/unicode.7x14.font")
                 ("XKB_DEFAULT_LAYOUT" . "us")
                 ("XKB_DEFAULT_OPTIONS" . "ctrl:nocaps")))
              (zshrc (list (local-file ".zshrc" "zshrc")))))

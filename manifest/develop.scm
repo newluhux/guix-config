@@ -28,11 +28,14 @@
 (define-public %develop-packages
   (append 
    (list
-    (list glibc "static") mandoc man-pages linux-libre-headers patchelf qt-creator
+    (list glibc "static") linux-libre-headers
+    mandoc man-pages sicp
+    patchelf qt-creator
     gdb clang-toolchain cscope indent git gnu-make adb fastboot xfel shellcheck
     blisp bear openixcard python-extract-dtb cmake (list openjdk "jdk") abootimg
-    binwalk strace ltrace perf ccache file bvi bison flex dtc u-boot-tools pluseview hexedit
-    wine64 licensecheck mtd-utils bmaptools zsh zsh-completions sicp i2c-tools qemu bc plan9port)
+    binwalk strace ltrace perf ccache file bvi bison flex dtc u-boot-tools
+    pluseview hexedit wine64 licensecheck mtd-utils bmaptools zsh
+    zsh-completions i2c-tools qemu bc plan9port dash)
    %qemu-dev-packages %qt-dev-packages))
 
 
