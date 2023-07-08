@@ -1,4 +1,7 @@
-(use-modules (gnu) (hui packages embedded) (hui packages linux))
+(use-modules
+ (gnu)
+ (hui packages embedded) (hui packages linux)
+ (hui services proxy))
 (use-service-modules
  networking desktop xorg virtualization docker linux)
 (use-package-modules
@@ -54,6 +57,9 @@
    (cons*
     (extra-special-file "/bin/zsh" (file-append zsh "/bin/zsh"))
     (extra-special-file "/bin/ps" (file-append procps "/bin/ps"))
+    (service clash-service-type
+             (clash-configuration
+              (config-file "/etc/clash/config.yaml")))
     (service qemu-binfmt-service-type
              (qemu-binfmt-configuration
               (platforms
