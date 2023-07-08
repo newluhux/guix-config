@@ -30,6 +30,9 @@
 ;; ivy mode
 (ivy-mode 1)
 
+;; input method
+(setq default-input-method 'rime)
+
 ;; my blog
 (require 'ox-publish)
 (defvar blog-path (concat (getenv "HOME") "/work/newluhux.github.io/"))
