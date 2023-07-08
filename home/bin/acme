@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec $HOME/.guix-home/profile/bin/acme -f $font $@

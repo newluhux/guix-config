@@ -19,13 +19,13 @@
                 ("font" . "$HOME/.guix-home/profile/font/fixed/unicode.7x14.font")
                 ("XKB_DEFAULT_LAYOUT" . "us")
                 ("XKB_DEFAULT_OPTIONS" . "ctrl:nocaps")))
-             (zshrc
-              (list (local-file ".zshrc" "zshrc")))))
+             (zshrc (list (local-file ".zshrc" "zshrc")))))
 
    (simple-service 'my-config-file
                    home-files-service-type
                    `((".emacs" ,(local-file ".emacs" "emacs"))
-
+                     (".zprofile" ,(local-file ".zprofile" "zprofile"))
+                     (".zshrc" ,(local-file ".zshrc" "zshrc"))
                      (".xinitrc" ,(local-file ".xinitrc" "xinitrc"
                                                 #:recursive? #t))
                      (".clang-format" ,(local-file ".clang-format"
@@ -34,6 +34,8 @@
                       ,(local-file ".config/sakura/sakura.conf"
 				   "sakura.conf"))
                      ("bin/editor" ,(local-file "bin/editor"
+                                                #:recursive? #t))
+                     ("bin/acme" ,(local-file "bin/acme"
                                                 #:recursive? #t))
                      ("bin/launcher" ,(local-file "bin/launcher"
                                                 #:recursive? #t))))
