@@ -14,7 +14,7 @@
  )
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "unifont-12"))
+(add-to-list 'default-frame-alist '(font . "unifont-10"))
 
 ;; theme
 (load-theme 'solarized-light)

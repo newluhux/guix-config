@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/zsh
+
+. ${HOME}/.zshrc
 
 xset r rate 200 50
 xset b off
@@ -7,4 +9,4 @@ xkbsetmap -layout us -options ctrl:nocaps
 
 emacs --daemon
 
-exec dbus-launch cwm
+rio -term ${HOME}/bin/launcher -font $font |& tee -a ${HOME}/.xinitrc.log

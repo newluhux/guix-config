@@ -1,6 +1,5 @@
 # alias
 alias ustardict='ustardict ~/.guix-home/profile/share/stardict/stardict-ecdict-2.4.2.'
-alias ls='ls --color'
 
 # history
 HISTFILE="$HOME/.zsh_history"

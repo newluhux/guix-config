@@ -1,75 +1,59 @@
-(use-modules
- (gnu)
- (gnu system nss)
- (guix utils)
- (hui packages embedded)
- (hui services proxy)
- (hui services games)
- (hui packages linux)
- (hui packages proxy))
-(use-service-modules desktop xorg virtualization docker sddm networking linux
-                     dns)
-(use-package-modules certs linux gnome wm radio admin embedded rsync shells)
-
+(use-modules (gnu) (hui packages embedded) (hui packages linux))
+(use-service-modules
+ networking desktop xorg virtualization docker linux)
+(use-package-modules
+ tmux screen ssh wm radio embedded rsync shells linux certs curl)
 
 (operating-system
+  (host-name "x230")
+  (timezone "Hongkong")
+  (locale "en_US.utf8")
+
   (kernel-loadable-modules
    (list
     ch341-i2c-spi-gpio-linux-module))
   (kernel-arguments (list "modprobe.blacklist=dvb_usb_rtl28xxu"))
 
-  (host-name "x230")
-  (timezone "Hongkong")
-  (locale "en_US.utf8")
-
   (keyboard-layout (keyboard-layout "us" #:options '("ctrl:nocaps")))
 
   (bootloader (bootloader-configuration
-               (bootloader grub-bootloader)
-               (targets '("/dev/sda"))
-               (keyboard-layout keyboard-layout)))
+                (bootloader grub-bootloader)
+                (targets '("/dev/sdb"))
+                (keyboard-layout keyboard-layout)))
 
-  (file-systems (append
-                 (list (file-system
-                         (device (uuid "d3b00ed3-660d-48c5-92ea-aa1e883bb02f"))
-                         (mount-point "/")
-                         (type "btrfs"))
+  (file-systems (cons* (file-system
+                        (device (uuid "d09514ce-dc8d-4ab7-81fd-251a6943dbc8"))
+                        (mount-point "/")
+                        (type "btrfs"))
                        (file-system
-                         (device (uuid "0E88-577E" 'fat))
-                         (mount-point "/sdcard")
-                         (type "vfat")))
-                 %base-file-systems))
+                        (device (uuid "d487d913-7c27-40e4-9acf-06723aad65bd"))
+                        (mount-point "/boot")
+                        (type "ext2"))
+                       %base-file-systems))
 
-  (swap-devices (list (swap-space
-                       (target "/swapfile"))))
+  (swap-devices
+   (list (swap-space
+          (target (uuid "6ff8ce0b-84f5-4b11-a4ed-a92fe9c74a72")))))
 
   (users (cons (user-account
                 (name "luhui")
                 (comment "Lu Hui")
                 (group "users")
                 (shell (file-append zsh "/bin/zsh"))
-                (supplementary-groups '("wheel" "netdev" "cdrom" "docker"
-                                        "audio" "video" "dialout" "kvm")))
+                (supplementary-groups '("wheel" "dialout" "kvm" "cdrom"
+                                        "audio" "video")))
                %base-user-accounts))
 
   (packages
-   (append
-    (list
-     nss-certs le-certs
-     singularity
-     rsync
-     btrfs-progs
-     xinitrc-xsession)
+   (cons*
+    tmux screen xinitrc-xsession btrfs-progs rsync singularity
+    nss-certs le-certs curl
     %base-packages))
 
   (services
    (cons*
-    (service minetest-service-type)
-    (service clash-service-type
-             (clash-configuration
-              (config-file "/etc/clash/config.yaml")))
-    (service docker-service-type)
-    (service singularity-service-type)
+    (extra-special-file "/bin/zsh" (file-append zsh "/bin/zsh"))
+    (extra-special-file "/bin/ps" (file-append procps "/bin/ps"))
     (service qemu-binfmt-service-type
              (qemu-binfmt-configuration
               (platforms
@@ -77,40 +61,10 @@
                 "arm" "aarch64" "riscv64"))))
     (udev-rules-service 'libsigrok libsigrok)
     (udev-rules-service 'rtl-sdr rtl-sdr)
-    (udev-rules-service 'xfel xfel)
-    (udev-rules-service 'openocd openocd)
-    (service tor-service-type
-             (tor-configuration
-              (config-file (plain-file "tor-config"
-                                       "Socks5Proxy 127.0.0.1:7891\n"))))
-    (service libvirt-service-type)
-    (service virtlog-service-type)
-    (service dnsmasq-service-type
-             (dnsmasq-configuration
-              (tftp-enable? #t)
-              (tftp-root "/share")))
-    (service zram-device-service-type
-             (zram-device-configuration
-              (size "2G")
-              (compression-algorithm 'zstd)
-              (priority 100)))
-    (service sddm-service-type)
+    (service docker-service-type)
+    (service singularity-service-type)
     (set-xorg-configuration
      (xorg-configuration
       (keyboard-layout keyboard-layout))
-     sddm-service-type)
-    (modify-services %desktop-services
-      (delete gdm-service-type)
-      (guix-service-type
-       config =>
-       (guix-configuration
-        (inherit config)
-        (substitute-urls
-         (append (list "https://mirrors.sjtug.sjtu.edu.cn/guix")
-                 %default-substitute-urls))))
-      (elogind-service-type
-       config =>
-       (elogind-configuration
-        (handle-lid-switch 'ignore))))))
-
-  (name-service-switch %mdns-host-lookup-nss))
+     gdm-service-type)
+    %desktop-services)))

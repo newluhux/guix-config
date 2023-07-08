@@ -2,7 +2,7 @@
 (use-package-modules games minetest emulators)
 
 (define-public %game-packages
-  (list warzone2100 cataclysm-dda nethack curseofwar minetest
+  (list cataclysm-dda nethack curseofwar
         nestopia-ue mgba ppsspp))
 
 (packages->manifest %game-packages)

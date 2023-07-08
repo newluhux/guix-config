@@ -1,6 +1,6 @@
 (use-modules (gnu) (guix profiles) (hui packages dict))
 
 (define-public %dict-packages
-  (list ustardict stardict-ecdict))
+  (list ))
 
 (packages->manifest %dict-packages)
