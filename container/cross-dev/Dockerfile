@@ -1,22 +1,17 @@
-FROM ubuntu:latest
+FROM fedora:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt update -y && \
-    apt install -y --no-install-recommends \
-    bc bison build-essential bzip2 ca-certificates ccache clang cmake \
-    cpio curl cvs diffutils ecj fastjar file findutils flex gawk \
-    gcc-multilib gettext git gkermit grep gzip java-propose-classpath \
-    libelf-dev libncurses5-dev libssl-dev locales lrzsz mercurial \
-    python2 python2-dev python3 python3-dev rsync screen sed subversion \
-    swig tar time tmux unzip util-linux wget xsltproc xz-utils zlib1g-dev \
-    nvi cscope openssh-client dropbear-bin sparse indent git-core gnupg flex \
-    bison build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses5 \
-    lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev \
-    libxml2-utils xsltproc unzip fontconfig lzma repo chrpath diffstat lz4 \
-    zstd less binwalk ckermit && \
-    apt autoremove -y && \
-    apt clean -y
+RUN dnf update -y && \
+    dnf install -y \
+    bc bison bzip2 ca-certificates ccache clang cmake cpio curl cvs diffutils \
+    file findutils flex gawk gcc gettext git gkermit grep gzip lrzsz mercurial \
+    python2 rsync screen sed subversion swig tar time tmux chrpath util-linux \
+    wget  python3 diffstat lz4 gcc-g++ unzip xsltproc xz zstd less binwalk \
+    ckermit neovim cscope openssh dropbear sparse indent gnupg bison zip curl \
+    ncurses xsltproc unzip fontconfig lzma repo patch arm-none-eabi-gcc-cs \
+    binutils-arm-linux-gnu gcc-arm-linux-gnu gcc-c++-arm-linux-gnu perl \
+    gcc-riscv64-linux-gnu gcc-c++-riscv64-linux-gnu binutils-riscv64-linux-gnu \
+    ncurses-devel
 
-RUN echo en_US.UTF-8 > /etc/locale.gen
-RUN locale-gen
+RUN rm -r /var/cache/ccache
