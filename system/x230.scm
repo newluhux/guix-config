@@ -49,7 +49,7 @@
                   (group "users")
                   (shell (file-append zsh "/bin/zsh"))
                   (supplementary-groups '("wheel" "dialout" "kvm" "cdrom"
-                                          "audio" "video")))
+                                          "audio" "video" "docker")))
                  %base-user-accounts))
 
     (packages
