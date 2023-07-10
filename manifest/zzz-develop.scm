@@ -26,19 +26,15 @@
    qttools qttranslations qt5compat qtbase qtsvg qtdeclarative qtshadertools
    qtsvg))
 
-(define-public %develop-packages
+(define-public %zzz-develop-packages
   (append 
+   %qemu-dev-packages %qt-dev-packages
    (list
-    (list glibc "static") linux-libre-headers
-    mandoc man-pages sicp
-    patchelf qt-creator
-    gdb gcc-toolchain cscope indent git gnu-make adb fastboot xfel shellcheck
-    blisp bear openixcard python-extract-dtb cmake (list openjdk "jdk") abootimg
-    binwalk strace ltrace perf ccache file bvi bison flex dtc u-boot-tools
-    pluseview hexedit wine64 licensecheck mtd-utils bmaptools zsh bash
-    zsh-completions i2c-tools qemu bc coreutils util-linux gawk psmisc tar
-    grep sed gzip xz zstd procps plan9port)
-   %qemu-dev-packages %qt-dev-packages))
+    (list glibc "static") linux-libre-headers indent git gnu-make adb
+    mandoc man-pages sicp patchelf qt-creator gdb gcc-toolchain cscope
+    fastboot xfel shellcheck blisp bear openixcard python-extract-dtb cmake
+    (list openjdk "jdk") abootimg binwalk strace ltrace perf ccache file bvi
+    bison flex dtc u-boot-tools pluseview hexedit wine64 licensecheck mtd-utils
+    bmaptools zsh-completions i2c-tools qemu plan9port)))
 
-
-(packages->manifest %develop-packages)
+(packages->manifest %zzz-develop-packages)

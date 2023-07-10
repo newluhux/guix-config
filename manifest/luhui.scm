@@ -3,9 +3,9 @@
 
 (define load-list
   (list
+   "aaa-base.scm"
    "archive.scm"
    "connect.scm"
-   "develop.scm"
    "dict.scm"
    "emacs.scm"
    "media.scm"
@@ -18,15 +18,16 @@
    "graphic.scm"
    "script.scm"
    "terminal.scm"
-   "web.scm"))
+   "web.scm"
+   "zzz-develop.scm"))
 
 (map load load-list)
 
 (define-public %luhui-packages
   (append
+   %aaa-base-packages
    %archive-packages
    %connect-packages
-   %develop-packages
    %dict-packages
    %emacs-packages
    %font-packages
@@ -39,6 +40,7 @@
    %proxy-packages
    %script-packages
    %terminal-packages
-   %web-packages))
+   %web-packages
+   %zzz-develop-packages))
 
 (packages->manifest %luhui-packages)
