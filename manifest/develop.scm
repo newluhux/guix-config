@@ -7,7 +7,8 @@
  hexedit scheme python-xyz bootloaders llvm wine license disk shells shellutils
  glib gtk spice attr xdisorg gl image containers libusb ncurses firmware
  pulseaudio sdl networking compression gettext ninja perl pkg-config python
- sphinx texinfo pcre virtualization algebra pciutils plan9)
+ sphinx texinfo pcre virtualization algebra pciutils plan9 commencement
+ gawk)
 
 (define-public %qemu-dev-packages
   (list
@@ -31,11 +32,12 @@
     (list glibc "static") linux-libre-headers
     mandoc man-pages sicp
     patchelf qt-creator
-    gdb clang-toolchain cscope indent git gnu-make adb fastboot xfel shellcheck
+    gdb gcc-toolchain cscope indent git gnu-make adb fastboot xfel shellcheck
     blisp bear openixcard python-extract-dtb cmake (list openjdk "jdk") abootimg
     binwalk strace ltrace perf ccache file bvi bison flex dtc u-boot-tools
-    pluseview hexedit wine64 licensecheck mtd-utils bmaptools zsh
-    zsh-completions i2c-tools qemu bc plan9port dash)
+    pluseview hexedit wine64 licensecheck mtd-utils bmaptools zsh bash
+    zsh-completions i2c-tools qemu bc coreutils util-linux gawk psmisc tar
+    grep sed gzip xz zstd procps plan9port)
    %qemu-dev-packages %qt-dev-packages))
 
 
