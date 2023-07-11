@@ -26,5 +26,9 @@ promptinit
 
 zstyle ':completion:*' menu select
 
+# guix
+GUIX_PROFILE=$HOME/.config/guix/current/
+source $GUIX_PROFILE/etc/profile
+
 # path
 export PATH=$HOME/bin:$PATH
