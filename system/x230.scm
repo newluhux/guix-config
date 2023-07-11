@@ -62,7 +62,6 @@
      (cons*
       (extra-special-file "/bin/bash" (file-append bash "/bin/bash"))
       (extra-special-file "/bin/zsh" (file-append zsh "/bin/zsh"))
-      (extra-special-file "/bin/ps" (file-append procps "/bin/ps"))
       (service clash-service-type
                (clash-configuration
                 (config-file "/etc/clash/config.yaml")))
