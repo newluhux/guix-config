@@ -77,6 +77,7 @@
       (service zram-device-service-type)
       (udev-rules-service 'libsigrok libsigrok)
       (udev-rules-service 'rtl-sdr rtl-sdr)
+      (service bluetooth-service-type)
       (service docker-service-type)
       (service singularity-service-type)
       (set-xorg-configuration
