@@ -4,6 +4,6 @@
 (define-public %aaa-base-packages
  (list
   zsh bash bc coreutils util-linux gawk psmisc tar grep sed gzip xz zstd
-  bzip2 procps mandoc))
+  bzip2 procps mandoc glibc-locales))
 
 (packages->manifest %aaa-base-packages)
