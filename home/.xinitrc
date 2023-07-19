@@ -9,4 +9,4 @@ xkbsetmap -layout us -options ctrl:nocaps
 
 emacs --daemon
 
-rio -term ${HOME}/bin/launcher -font $font |& tee -a ${HOME}/.xinitrc.log
+cwm |& tee -a $HOME/.xinitrc.log

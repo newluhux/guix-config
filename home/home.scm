@@ -27,6 +27,7 @@
                    `((".emacs" ,(local-file ".emacs" "emacs"))
                      (".zprofile" ,(local-file ".zprofile" "zprofile"))
                      (".zshrc" ,(local-file ".zshrc" "zshrc"))
+                     (".cwmrc" ,(local-file ".cwmrc" "cwmrc"))
                      (".xinitrc" ,(local-file ".xinitrc" "xinitrc"
                                                 #:recursive? #t))
                      (".clang-format" ,(local-file ".clang-format"

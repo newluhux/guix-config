@@ -4,7 +4,7 @@
 
 (define-public %graphic-packages
   (list
-   rofi konsole xset xsetroot xkbset xrdb xkill xclip xhost
+   cwm rofi konsole xset xsetroot xkbset xrdb xkill xclip xhost
    qt5ct breeze-icons xfe))
 
 (packages->manifest %graphic-packages)

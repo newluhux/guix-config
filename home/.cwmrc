@@ -1,0 +1,11 @@
+fontname unifont-10
+command konsole konsole
+command dolphin dolphin
+command zathura zathura
+command icecat icecat
+command chromium chromium
+command qtcreator qtcreator
+command emacsclient editor
+command pulseview pulseview
+command gqrx gqrx
+command xkill xkill
