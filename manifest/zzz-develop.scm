@@ -35,6 +35,6 @@
     fastboot xfel shellcheck blisp bear openixcard python-extract-dtb cmake
     (list openjdk "jdk") abootimg binwalk strace ltrace perf ccache file bvi
     bison flex dtc u-boot-tools pluseview hexedit wine64 licensecheck mtd-utils
-    bmaptools zsh-completions i2c-tools qemu plan9port)))
+    bmaptools zsh-completions i2c-tools qemu)))
 
 (packages->manifest %zzz-develop-packages)
