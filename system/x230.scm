@@ -3,7 +3,7 @@
  (hui packages embedded) (hui packages linux)
  (hui services proxy))
 (use-service-modules
- networking desktop xorg virtualization docker linux)
+ networking desktop xorg virtualization docker linux sddm)
 (use-package-modules
  tmux screen ssh wm radio embedded rsync shells linux certs curl bash)
 
@@ -80,10 +80,12 @@
       (service bluetooth-service-type)
       (service docker-service-type)
       (service singularity-service-type)
+      (service sddm-service-type)
       (set-xorg-configuration
        (xorg-configuration
         (keyboard-layout keyboard-layout))
-       gdm-service-type)
-      %desktop-services))))
+       sddm-service-type)
+      (modify-services %desktop-services
+        (delete gdm-service-type))))))
 
 %x230-os
