@@ -8,7 +8,7 @@
  glib gtk spice attr xdisorg gl image containers libusb ncurses firmware
  pulseaudio sdl networking compression gettext ninja perl pkg-config python
  sphinx texinfo pcre virtualization algebra pciutils plan9 commencement
- gawk)
+ gawk forth)
 
 (define-public %qemu-dev-packages
   (list
@@ -35,6 +35,6 @@
     fastboot xfel shellcheck blisp bear openixcard python-extract-dtb cmake
     (list openjdk "jdk") abootimg binwalk strace ltrace perf ccache file bvi
     bison flex dtc u-boot-tools pluseview hexedit wine64 licensecheck mtd-utils
-    bmaptools zsh-completions i2c-tools qemu)))
+    bmaptools zsh-completions i2c-tools qemu gforth)))
 
 (packages->manifest %zzz-develop-packages)
