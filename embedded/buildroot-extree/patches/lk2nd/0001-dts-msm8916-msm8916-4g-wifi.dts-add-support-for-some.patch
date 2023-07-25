@@ -1,0 +1,48 @@
+From bd044447e5ff283e2394de0a2abc361f986bd3c8 Mon Sep 17 00:00:00 2001
+From: LuHui <luhux76@gmail.com>
+Date: Sat, 15 Apr 2023 20:42:09 +0800
+Subject: [PATCH] dts/msm8916/msm8916-4g-wifi.dts: add support for some 4g
+ stick
+
+---
+ dts/msm8916/msm8916-4g-wifi.dts | 15 +++++++++++++++
+ dts/msm8916/rules.mk            |  1 +
+ 2 files changed, 16 insertions(+)
+ create mode 100644 dts/msm8916/msm8916-4g-wifi.dts
+
+diff --git a/dts/msm8916/msm8916-4g-wifi.dts b/dts/msm8916/msm8916-4g-wifi.dts
+new file mode 100644
+index 00000000..6e134a4c
+--- /dev/null
++++ b/dts/msm8916/msm8916-4g-wifi.dts
+@@ -0,0 +1,15 @@
++// SPDX-License-Identifier: GPL-2.0-only
++// from https://github.com/OpenStick/lk2nd/blob/c4075ddfcb576bf137227889fe606b324f611944/dts/msm8916/msm8916-4g-wifi.dts
++
++/dts-v1/;
++
++#include <skeleton.dtsi>
++#include <lk2nd.h>
++
++/ {
++	model = "4g stick";
++	compatible = "4g,stick", "qcom,msm8916", "lk2nd,device";
++	qcom,msm-id = <0xce 0x00 0xf8 0x00 0xf9 0x00 0xfa 0x00>;
++	qcom,board-id = <0x08 0x100>;
++	lk2nd,keys = <KEY_HOME 37 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>;
++};
+diff --git a/dts/msm8916/rules.mk b/dts/msm8916/rules.mk
+index ed07ed12..20378c3a 100644
+--- a/dts/msm8916/rules.mk
++++ b/dts/msm8916/rules.mk
+@@ -9,6 +9,7 @@ DTBS += \
+ 	$(LOCAL_DIR)/msm8216-samsung-r07.dtb \
+ 	$(LOCAL_DIR)/msm8216-samsung-r08.dtb \
+ 	$(LOCAL_DIR)/msm8916-512mb-mtp.dtb \
++	$(LOCAL_DIR)/msm8916-4g-wifi.dtb \
+ 	$(LOCAL_DIR)/msm8916-asus-z00l.dtb \
+ 	$(LOCAL_DIR)/msm8916-huawei-g7-l01.dtb \
+ 	$(LOCAL_DIR)/msm8916-huawei-hwt1a21l.dtb \
+-- 
+2.35.7
+

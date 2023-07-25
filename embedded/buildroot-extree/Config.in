@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_HUI_PATH/package/ek/Config.in"

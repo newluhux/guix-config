@@ -1,0 +1,10 @@
+* buildroot external tree collect
+
+** how to use this repo
+
+#+BEGIN_SRC shell
+  git clone https://git.buildroot.net/buildroot
+  export BR2_EXTERNAL=/path/to/thisrepo/thisdir/
+  make xxx_defconfig
+  make -j$(nproc)
+#+END_SRC
