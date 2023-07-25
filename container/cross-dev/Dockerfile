@@ -22,7 +22,9 @@ RUN dnf update -y && \
     xxd android-tools bmap-tools parted kmod mtools openocd gdb llvm \
     libserialport-devel pulseview qt-creator qt-creator-doc \
     clang-tools-extra graphviz mandoc man-pages kernel-headers \
-    perf valgrind glibc-static glibc-utils
-
+    perf valgrind glibc-static glibc-utils SDL_sound-devel SDL_gfx-devel \
+    SDL_image-devel SDL_mixer-devel SDL_net-devel SDL_ttf-devel bzip2-devel \
+    bzip2-libs fontconfig-devel libjpeg-turbo-devel libpng-devel libvorbis-devel \
+    gforth picocom minicom ser2net cutter-re
 
 RUN rm -r /var/cache/ccache
