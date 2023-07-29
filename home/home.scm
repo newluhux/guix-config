@@ -35,18 +35,13 @@
                      (".config/sakura/sakura.conf"
                       ,(local-file ".config/sakura/sakura.conf"
 				   "sakura.conf"))
+                     ("bin/terminal" ,(local-file "bin/terminal"
+                                                #:recursive? #t))
                      ("bin/editor" ,(local-file "bin/editor"
-                                                #:recursive? #t))
-                     ("bin/acme" ,(local-file "bin/acme"
-                                                #:recursive? #t))
-                     ("bin/launcher" ,(local-file "bin/launcher"
                                                 #:recursive? #t))))
    (simple-service 'ccache-setup
                    home-files-service-type
-                   `(("bin/cc" ,(file-append ccache "/bin/ccache"))
-                     ("bin/gcc" ,(file-append ccache "/bin/ccache"))
-                     ("bin/clang" ,(file-append ccache "/bin/ccache"))
+                   `(("bin/gcc" ,(file-append ccache "/bin/ccache"))
                      ("bin/c++" ,(file-append ccache "/bin/ccache"))
-                     ("bin/g++" ,(file-append ccache "/bin/ccache"))
-                     ("bin/clang++" ,(file-append ccache "/bin/ccache")))))))
+                     ("bin/g++" ,(file-append ccache "/bin/ccache")))))))
 

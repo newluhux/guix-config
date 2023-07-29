@@ -1,5 +1,5 @@
 fontname unifont-10
-command konsole konsole
+command terminal terminal
 command xfe xfe
 command zathura zathura
 command icecat icecat

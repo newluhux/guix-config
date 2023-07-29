@@ -5,6 +5,6 @@
 (define-public %connect-packages
   (list
    openssh picocom lrzsz ek eksw screen tmux iperf ckermit gkermit ukermit
-   putty virt-manager usbip-utils bluez blueman qbittorrent))
+   putty virt-manager usbip-utils bluez qbittorrent))
 
 (packages->manifest %connect-packages)
