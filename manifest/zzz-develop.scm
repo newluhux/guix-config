@@ -34,7 +34,7 @@
     mandoc man-pages sicp patchelf qt-creator gdb gcc-toolchain cscope
     fastboot xfel shellcheck blisp bear openixcard python-extract-dtb cmake
     (list openjdk "jdk") abootimg binwalk strace ltrace perf ccache file bvi
-    bison flex dtc u-boot-tools pluseview hexedit wine64 licensecheck mtd-utils
-    bmaptools zsh-completions i2c-tools qemu gforth)))
+    bison flex dtc u-boot-tools pluseview-next hexedit wine64 licensecheck
+    mtd-utils bmaptools zsh-completions i2c-tools qemu gforth)))
 
 (packages->manifest %zzz-develop-packages)
