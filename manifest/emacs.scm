@@ -3,7 +3,7 @@
 
 (define-public %emacs-packages
   (list
-   emacs-next emacs-solarized-theme
+   emacs-next
    emacs-rime emacs-telega emacs-magit emacs-ivy
    emacs-dts-mode))
 
