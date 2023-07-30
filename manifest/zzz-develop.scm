@@ -8,7 +8,7 @@
  glib gtk spice attr xdisorg gl image containers libusb ncurses firmware
  pulseaudio sdl networking compression gettext ninja perl pkg-config python
  sphinx texinfo pcre virtualization algebra pciutils plan9 commencement
- gawk forth)
+ gawk forth cpio onc-rpc)
 
 (define-public %qemu-dev-packages
   (list
@@ -35,7 +35,7 @@
     fastboot xfel shellcheck blisp bear openixcard python-extract-dtb cmake
     (list openjdk "jdk") abootimg binwalk strace ltrace perf ccache file bvi
     bison flex dtc u-boot-tools pluseview-next hexedit wine64 licensecheck
-    mtd-utils bmaptools zsh-completions i2c-tools qemu gforth
-    rust-wlink-0.0.4 rust-wchisp-0.2)))
+    mtd-utils bmaptools zsh-completions i2c-tools qemu gforth chrpath
+    rust-wlink-0.0.4 rust-wchisp-0.2 cpio diffstat lz4 pzstd rpcsvc-proto)))
 
 (packages->manifest %zzz-develop-packages)
