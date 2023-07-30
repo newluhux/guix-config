@@ -5,7 +5,8 @@
 (use-service-modules
  networking desktop xorg virtualization docker linux sddm)
 (use-package-modules
- tmux screen ssh wm radio embedded rsync shells linux certs curl bash)
+ tmux screen ssh wm radio embedded rsync shells linux certs curl bash
+ electronics)
 
 (define-public %x230-os
   (operating-system
@@ -28,6 +29,10 @@
     (file-systems (cons* (file-system
                            (device (uuid "d09514ce-dc8d-4ab7-81fd-251a6943dbc8"))
                            (mount-point "/")
+                           (type "btrfs"))
+                         (file-system
+                           (device (uuid "606c1887-60f9-4eec-85e2-0e052bdb8275"))
+                           (mount-point "/home")
                            (type "btrfs"))
                          (file-system
                            (device (uuid "d487d913-7c27-40e4-9acf-06723aad65bd"))
