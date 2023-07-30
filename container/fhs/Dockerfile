@@ -24,7 +24,8 @@ RUN dnf update -y && \
     clang-tools-extra graphviz mandoc man-pages kernel-headers \
     perf valgrind glibc-static glibc-utils SDL_sound-devel SDL_gfx-devel \
     SDL_image-devel SDL_mixer-devel SDL_net-devel SDL_ttf-devel bzip2-devel \
-    bzip2-libs fontconfig-devel libjpeg-turbo-devel libpng-devel libvorbis-devel \
-    gforth picocom minicom ser2net cutter-re
+    bzip2-libs fontconfig-devel libjpeg-turbo-devel libpng-devel \
+    libvorbis-devel gforth picocom minicom ser2net cutter-re unifont \
+    unifont-fonts unifont-ttf-fonts terminus-fonts
 
 RUN rm -r /var/cache/ccache
