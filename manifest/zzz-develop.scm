@@ -36,6 +36,6 @@
     (list openjdk "jdk") abootimg binwalk strace ltrace perf ccache file bvi
     bison flex dtc u-boot-tools pluseview-next hexedit wine64 licensecheck
     mtd-utils bmaptools zsh-completions i2c-tools qemu gforth
-    rust-wlink-0.0.4)))
+    rust-wlink-0.0.4 rust-wchisp-0.2)))
 
 (packages->manifest %zzz-develop-packages)
