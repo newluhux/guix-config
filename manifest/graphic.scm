@@ -4,7 +4,7 @@
 
 (define-public %graphic-packages
   (list
-   cwm vte xset xsetroot xkbset xrdb xkill xclip xhost
+   cwm vte sakura xset xsetroot xkbset xrdb xkill xclip xhost
    qt5ct breeze-icons))
 
 (packages->manifest %graphic-packages)

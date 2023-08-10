@@ -12,7 +12,7 @@
  )
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "unifont-10"))
+(add-to-list 'default-frame-alist '(font . "unscii-12"))
 
 ;; theme
 (load-theme 'modus-operandi)

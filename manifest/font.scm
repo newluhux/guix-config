@@ -1,8 +1,8 @@
-(use-modules (gnu) (guix profiles))
+(use-modules (gnu) (guix profiles) (hui packages font))
 (use-package-modules fonts fontutils)
 
 (define-public %font-packages
   (list
-   fontconfig font-terminus font-gnu-unifont font-google-noto-emoji))
+   fontconfig font-unscii font-terminus font-gnu-unifont font-google-noto-emoji))
 
 (packages->manifest %font-packages)
