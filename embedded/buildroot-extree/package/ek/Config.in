@@ -1,7 +1,0 @@
-config BR2_PACKAGE_EK
-	bool "ek"
-	help
-	  Compact, fast, robust, portable Kermit file transfer
-	  source code to embed in devices.
-
-	  https://kermitproject.org/ek.html
