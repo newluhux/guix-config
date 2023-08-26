@@ -1,6 +1,3 @@
-# alias
-alias ustardict='ustardict ~/.guix-home/profile/share/stardict/stardict-ecdict-2.4.2.'
-
 # history
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
