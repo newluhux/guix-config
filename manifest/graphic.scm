@@ -5,6 +5,6 @@
 (define-public %graphic-packages
   (list
    cwm vte sakura xset xsetroot xkbset xrdb xkill xclip xhost
-   qt5ct breeze-icons tesseract-ocr))
+   qt5ct breeze-icons tesseract-ocr setxkbmap))
 
 (packages->manifest %graphic-packages)
