@@ -12,7 +12,7 @@
  )
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "unscii-12"))
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-8"))
 
 ;; theme
 (load-theme 'modus-operandi)
