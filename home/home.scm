@@ -16,8 +16,6 @@
              (environment-variables
               '(("PAGER" . "less")
                 ("EDITOR" . "editor")
-                ("font" .
-                 "$HOME/.guix-home/profile/font/fixed/unicode.7x14.font")
                 ("XKB_DEFAULT_LAYOUT" . "us")
                 ("XKB_DEFAULT_OPTIONS" . "ctrl:nocaps")))
              (zshrc (list (local-file ".zshrc" "zshrc")))))
