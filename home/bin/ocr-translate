@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# just a simple script for translate english to chinese
+scrot -f -s -F - | echo "$(tesseract - -)" | notify-send OCR-TRANSLATE "$(stardict)"

@@ -35,6 +35,12 @@
 				   "sakura.conf"))
                      ("bin/terminal" ,(local-file "bin/terminal"
                                                 #:recursive? #t))
+                     ("bin/stardict" ,(local-file "bin/stardict"
+                                                #:recursive? #t))
+                     ("bin/ocr-translate" ,(local-file "bin/ocr-translate"
+                                                #:recursive? #t))
+                     ("bin/clip-translate" ,(local-file "bin/clip-translate"
+                                                #:recursive? #t))
                      ("bin/editor" ,(local-file "bin/editor"
                                                 #:recursive? #t))))
    (simple-service 'ccache-setup

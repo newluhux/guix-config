@@ -1,8 +1,13 @@
 fontname unifont-14
 command terminal terminal
-command scrot 'scrot -s'
+command clip-translate clip-translate
+command ocr-translate ocr-translate
 command icecat icecat
 command chromium chromium
 command qtcreator qtcreator
 command emacsclient editor
+command scrot 'scrot -s'
 command xkill xkill
+
+bind-key 4-z ocr-translate
+bind-key 4-a clip-translate

@@ -12,5 +12,8 @@ then
 fi
 
 emacs --daemon
+dunst &
 
 cwm |& tee -a $HOME/.xinitrc.log
+
+killall dunst

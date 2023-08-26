@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# just a simple script for translate english to chinese from clipboard
+echo "$(xclip -selection primary -o)" | notify-send CLIP-TRANSLATE "$(stardict)"
