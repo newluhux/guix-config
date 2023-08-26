@@ -33,6 +33,9 @@
                      (".config/sakura/sakura.conf"
                       ,(local-file ".config/sakura/sakura.conf"
 				   "sakura.conf"))
+                     (".config/dunst/dunstrc"
+                      ,(local-file ".config/dunst/dunstrc"
+				   "dunstrc"))
                      ("bin/terminal" ,(local-file "bin/terminal"
                                                 #:recursive? #t))
                      ("bin/stardict" ,(local-file "bin/stardict"
