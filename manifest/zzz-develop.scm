@@ -8,7 +8,7 @@
  glib gtk spice attr xdisorg gl image containers libusb ncurses firmware
  pulseaudio sdl networking compression gettext ninja perl pkg-config python
  sphinx texinfo pcre virtualization algebra pciutils plan9 commencement
- gawk forth cpio onc-rpc)
+ gawk forth cpio onc-rpc electronics)
 
 (define-public %qemu-dev-packages
   (list
@@ -34,7 +34,7 @@
     mandoc man-pages sicp patchelf qt-creator gdb gcc-toolchain cscope
     fastboot xfel shellcheck blisp bear openixcard python-extract-dtb cmake
     (list openjdk "jdk") abootimg binwalk strace ltrace perf ccache file bvi
-    bison flex dtc u-boot-tools pluseview-next hexedit wine64 licensecheck
+    bison flex dtc u-boot-tools pulseview hexedit wine64 licensecheck
     mtd-utils bmaptools zsh-completions i2c-tools qemu gforth chrpath
     rust-wlink-0.0.4 rust-wchisp-0.2 cpio diffstat lz4 pzstd rpcsvc-proto)))
 
