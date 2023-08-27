@@ -15,7 +15,9 @@ fi
 
 emacs --daemon
 dunst &
+conky -d -c $HOME/.config/conky/conkyrc
 
 cwm |& tee -a $HOME/.xinitrc.log
 
 killall dunst
+killall conky

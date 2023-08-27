@@ -30,6 +30,9 @@
                                                 #:recursive? #t))
                      (".clang-format" ,(local-file ".clang-format"
 						   "clang-format"))
+                     (".config/conky/conkyrc"
+                      ,(local-file ".config/conky/conkyrc"
+				   "conkyrc"))
                      (".config/guix/channels.scm"
                       ,(local-file ".config/guix/channels.scm"
 				   "channels.scm"))
