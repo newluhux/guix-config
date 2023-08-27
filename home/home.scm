@@ -30,6 +30,9 @@
                                                 #:recursive? #t))
                      (".clang-format" ,(local-file ".clang-format"
 						   "clang-format"))
+                     (".config/guix/channels.scm"
+                      ,(local-file ".config/guix/channels.scm"
+				   "channels.scm"))
                      (".config/sakura/sakura.conf"
                       ,(local-file ".config/sakura/sakura.conf"
 				   "sakura.conf"))
