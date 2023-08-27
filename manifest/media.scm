@@ -1,6 +1,6 @@
-(use-modules (gnu) (guix profiles) (hui packages telegram))
-(use-package-modules
- image-viewers xdisorg video linux kde-multimedia image wm pdf music)
+(use-modules (gnu) (guix profiles))
+(use-package-modules 
+ image-viewers xdisorg video linux kde-multimedia image wm pdf music telegram)
 
 (define-public %media-packages
   (list
