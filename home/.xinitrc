@@ -9,6 +9,8 @@ setxkbmap -layout us -option ctrl:nocaps
 if [ -e $HOME/.wallpaper ]
 then
 	feh --bg-scale $HOME/.wallpaper
+else
+	feh --bg-scale $HOME/.guix-home/profile/share/wallpaper/this-is-freedom-wallpaper.png
 fi
 
 emacs --daemon
