@@ -1,5 +1,12 @@
 #!/bin/zsh
 
+eval `dbus-launch --sh-syntax`
+
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+fcitx5 -d -r
+
 . ${HOME}/.zshrc
 
 xset r rate 200 50
